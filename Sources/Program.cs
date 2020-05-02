@@ -3,8 +3,8 @@
  * User: Tebjan Halm
  * Date: 21.01.2014
  * Time: 16:55
- * 
- * 
+ *
+ *
  */
 using System;
 using System.Windows.Forms;
@@ -26,6 +26,6 @@ namespace TimerTool
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new MainForm(args));
 		}
-		
+
 	}
 }
