@@ -18,6 +18,7 @@ namespace TimerTool
 		public uint PeriodMin;
 		public uint PeriodMax;
 		public uint PeriodCurrent;
+		public bool Equals(TimerCaps other) => PeriodMin == other.PeriodMin && PeriodMax == other.PeriodMax && PeriodCurrent == other.PeriodCurrent;
 	};
 	
 	/// <summary>

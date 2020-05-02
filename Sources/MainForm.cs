@@ -122,12 +122,16 @@ namespace TimerTool
 			DisplayTimerCaps();
 		}
 
-        private void DisplayTimerCaps()
+		TimerCaps _last_caps;
+		private void DisplayTimerCaps()
 		{
 			var caps = WinApiCalls.QueryTimerResolution();
+			if (caps.Equals(_last_caps))
+				return;
 			CurrentLabel.Text = "Current: " + (caps.PeriodCurrent/10000.0) + " ms";
 			MinLabel.Text = "Max: " + (caps.PeriodMin/10000.0) + " ms";
 			MaxLabel.Text = "Min: " + (caps.PeriodMax/10000.0) + " ms";
+			_last_caps = caps;
 		}
 		
 		void Timer1Tick(object sender, EventArgs e)
